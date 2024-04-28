@@ -21,8 +21,8 @@ repos:
   hooks:
     - id: pylint
       name: pylint
-      entry: pylint
+      entry: PYTHONPATH=src pylint
       language: system
       types: [python]
-      args: ["-rn", "-sn", "--rcfile=pylintrc", "--fail-on=I"]
-      exclude: tests(/\w*)*/functional/|tests/input|tests(/\w*)*data/|doc/
+      args: ["-rn", "-sn", "--fail-on=I"]
+      exclude: ^tests/.*$
