@@ -16,6 +16,7 @@ repos:
   hooks:
     - id: gitleaks
 
+
 # PYTHON LINTING
 - repo: local
   hooks:
