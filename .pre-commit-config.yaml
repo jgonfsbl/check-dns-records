@@ -15,3 +15,14 @@ repos:
   rev: v8.18.2
   hooks:
     - id: gitleaks
+
+# PYTHON LINTING
+- repo: local
+  hooks:
+    - id: pylint
+      name: pylint
+      entry: pylint
+      language: system
+      types: [python]
+      args: ["-rn", "-sn", "--rcfile=pylintrc", "--fail-on=I"]
+      exclude: tests(/\w*)*/functional/|tests/input|tests(/\w*)*data/|doc/
